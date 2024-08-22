@@ -55,9 +55,9 @@
   }
   /* 반응형 비디오% 이용/제한을 주고싶을 때 max-width */
   .player video{
-    width: 100%;
-    height:50%;
-    max-width:1000px;
+    width:30%;
+    height:30%;
+    max-width:300px;
   }
   /* vedio info */
   .info .metadata .hashtags{
@@ -208,13 +208,17 @@
 .infoAndUpNext{
   display: flex;
   flex-direction: column;
+  
 }
 /* 미디어 쿼리 이용:화면이 768 px이상 일때 
 디렉션이 로우로 변경 /양옆으로 변경   */
 @media screen and (min-width:768px) {
   .infoAndUpNext{
-    flex-direction: row;
-    margin: var(--padding) 0;
-  }
+   flex-direction: row;
+   margin: var(--padding) 0;
   
+  }
+  .info,.upNext{
+    width: 50%;
+  }
 }
