@@ -4,16 +4,16 @@
   --black-color:#140a00;
   --blue-color:#045fd4;
   --red-color:#ff0000;
-  --grey-dark-color:#909090;
-  --grey-light-color:#e0e0e0;
+  --grey-dark-color:#8a8a8a;
+  --grey-light-color:#d1d1d1;
   /* size */
   --padding:12px;
   --avatar-size:36px;
   /* font size */
   --font-large:18px;
-  --font-medium:12px;
-  --font-small:10px;
-  --font-micro:8px;
+  --font-medium:14px;
+  --font-small:12px;
+  --font-micro:10px;
 }
   *{ 
     padding: 0;
@@ -40,6 +40,7 @@
   }
   header .logo i{
     color:var(--red-color);
+    
   }
   header .icons .fa-search {
     margin-right: var(--padding);
@@ -55,7 +56,7 @@
   }
   /* 반응형 비디오% 이용/제한을 주고싶을 때 max-width */
   .player video{
-    width:30%;
+    width:40%;
     height:30%;
     max-width:300px;
   }
@@ -64,6 +65,7 @@
     display: flex;
     font-size: var(--font-small);
     color: var(--blue-color);
+    font-weight: 500;
   }
   .info .metadata .hashtags{
     display: flex;
@@ -77,8 +79,8 @@
   .info .metadata .titleAndButton{
     display: flex;
   }
-  /* 타이틀이 브라우져 사이즈가 줄어도 
-  두줄로 제한적 표시 되는것 */
+  /* 타이틀이 브라우저 사이즈가 줄어도 
+  두줄로 제한적 표시 ,나머지는 ... */
   .info .metadata .titleAndButton .title{
     font-size: var(--font-medium);
     margin-right: var(--padding);
@@ -86,16 +88,17 @@
   }
   .info .metadata .titleAndButton .title.clamp {
     /*블록 컨테이너의 콘텐츠를 지정한 줄 수 
-    만큼 제한   4가지가 함께 적용되어야 한다.  */
+    만큼 제한 4가지가 함께 적용되어야함.  */
     display: -webkit-box;
     -webkit-box-orient: vertical;  
     -webkit-line-clamp: 2;
     overflow: hidden;
-    /* 요소를 넘치는 텍스트를 감추기  */
+    /* 오버플로:박스에 넘치는 텍스트를 감추기  */
   }
   .info .metadata .titleAndButton .moreBtn{
     height: 100%;
     transition: transform 300ms easy-in-out;
+    background-color: #fff;
   }
   .info .metadata .titleAndButton .moreBtn .clicked{
     transform: rotate(180deg);
@@ -116,6 +119,7 @@
     display: flex;
     flex-direction: column; 
     font-size: var(--font-small);
+    background-color: #fff;
    }
    .info .actions button i{
     margin:0 auto;
@@ -124,8 +128,9 @@
     /* 반사이즈로 넣고 싶을 때 calc */
     font-size: 16px;
     color: var(--grey-dark-color);
+  
    }
-   .info .actions button i.active{
+   .info .actions button i:active{
     color: var(--blue-color);
    }
 
@@ -161,7 +166,8 @@
     /*  전체 대문자 변환  */
     color:var(--red-color);
     font-size: var(--font-medium);
-   
+    background-color: #fff;
+    font-weight:400;
    }
     button,
     button:focus {
@@ -196,9 +202,15 @@
   flex-direction: column;
   flex: 1 1 60%;
 }
+.upNext .item .info .title{
+  font-size: 13px;
+  font-family: "Moderustic", sans-serif;
+  word-spacing: 2;
+}
 .upNext .item .moreBtn{
   flex: 1 1 5%;
   height: 100%;
+  background-color: #fff;
 }
 .upNext .item .info .name,
 .upNext .item .info .views{
