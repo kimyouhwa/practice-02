@@ -44,6 +44,9 @@
   header .icons .fa-search {
     margin-right: var(--padding);
   }
+  body>.info{
+    padding: var(--padding);
+  }
   .player{
     position: sticky;  /*고정역할 :아래에 위치 지정  */
     top: 0;
@@ -56,13 +59,11 @@
     height:50%;
     max-width:1000px;
   }
+  /* vedio info */
   .info .metadata .hashtags{
     display: flex;
     font-size: var(--font-small);
     color: var(--blue-color);
-  }
-  body>.info{
-    padding: var(--padding);
   }
   .info .metadata .hashtags{
     display: flex;
@@ -145,7 +146,7 @@
    }
    .info .channel .metadata img{
     width: var(--avator-size);
-    height:var(--avatar-size);
+    height: var(--avatar-size);
     border-radius: 50%;
    }
    .info .channel .metadata .info .name{
@@ -208,7 +209,8 @@
   display: flex;
   flex-direction: column;
 }
-/* 미디어 쿼리 이용:화면이 넓어 지면  */
+/* 미디어 쿼리 이용:화면이 768 px이상 일때 
+디렉션이 로우로 변경 /양옆으로 변경   */
 @media screen and (min-width:768px) {
   .infoAndUpNext{
     flex-direction: row;
